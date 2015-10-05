@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>nuSelectable Demo</title>
+    <meta name="description" content="Demo for nuSelectable jQuery plugin.">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+    .item {
+        height: 100px;
+        margin: 5px;
+        background: #EEE;
+        border: 1px solid transparent;
+    }
+    .item span {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        color: #777;
+    }
+    .nu-selection-box {
+        border: 1px dotted #BBB;
+        background: rgba(0, 0, 0, 0.04);
+    }
+    .nu-selected {
+        border: 1px solid #3079ED;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+    }
+    
+    </style>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    
+    <div id="item-container" class="container-fluid" style="min-height: 1000px;">
+        <div class="row">
+            <div class=" col-md-2">
+                <div class="item"><span>Item 1</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 2</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 3</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 4</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 5</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 6</span></div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class=" col-md-2">
+                <div class="item"><span>Item 7</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 8</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 9</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 10</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 11</span></div>
+            </div>
+            <div class=" col-md-2">
+                <div class="item"><span>Item 12</span></div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.rawgit.com/avxto/nuSelectable/master/src/jquery.nu-selectable.min.js"></script>
+    <script>
+    $(function() { 
+        var selection = $('#item-container').nuSelectable({
+            items: '.item',
+            selectionClass: 'nu-selection-box',
+            selectedClass: 'nu-selected',
+            autoRefresh: true
+        });
+    });
+    </script>
+
+</body>
+</html>
