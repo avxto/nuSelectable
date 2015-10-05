@@ -35,7 +35,7 @@
 
 <body>
     
-    <div id="item-container" class="container-fluid" style="min-height: 1000px;">
+    <div id="item-container" class="container-fluid">
         <div class="row">
             <div class=" col-md-2">
                 <div class="item"><span>Item 1</span></div>
@@ -85,7 +85,7 @@
     <script src="https://cdn.rawgit.com/avxto/nuSelectable/master/src/jquery.nu-selectable.min.js"></script>
     <script>
     $(function() { 
-        var selection = $('#item-container').nuSelectable({
+        var selection = $('body').nuSelectable({
             items: '.item',
             selectionClass: 'nu-selection-box',
             selectedClass: 'nu-selected',
