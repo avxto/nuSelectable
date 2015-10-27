@@ -2,7 +2,7 @@
 Lightweight alternative to jQuery Selectable. Inspired by Google Drive file select.
 
 # Code example
-```
+``` javascript
 $(function() {
     $('#item-container').nuSelectable({
         items: '.item',
