@@ -45,9 +45,8 @@
 
     nuSelectable.prototype._cacheItemData = function() {
         var itemData = [],
-            itemsLength;
-        itemsLength = this.items.length;
-
+            itemsLength = this.items.length;
+            
         for (var i = 0, item; item = $(this.items[i]), i < itemsLength; i++) {
             itemData.push({
                 element: item,
