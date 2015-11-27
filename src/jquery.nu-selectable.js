@@ -10,7 +10,11 @@
 
   var plugin = 'nuSelectable';
 
-  var options = {};
+  var options = {
+    onSelect: function() {},
+    onUnSelect: function() {},
+    onClear: function() {}
+  };
 
   var nuSelectable = function(container, options) {
     this.container = $(container);
@@ -77,11 +81,13 @@
         if (!item.selected) {
           item.element.addClass(this.options.selectedClass);
           item.selected = true;
+          this.options.onSelect(item.element);
         }
       }
       else {
         if (this.selecting) {
           item.element.removeClass(this.options.selectedClass);
+          this.options.onUnSelect(item.element);
         }
       }
 
@@ -113,6 +119,7 @@
 
   nuSelectable.prototype.clear = function() {
     this.items.removeClass(this.options.selectedClass);
+    this.options.onClear();
   };
 
   nuSelectable.prototype._mouseDown = function(event) {
