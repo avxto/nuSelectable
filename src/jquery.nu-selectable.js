@@ -10,7 +10,7 @@
 
   var plugin = 'nuSelectable';
 
-  var options = {
+  var defaults = {
     onSelect: function() {},
     onUnSelect: function() {},
     onClear: function() {}
@@ -18,7 +18,7 @@
 
   var nuSelectable = function(container, options) {
     this.container = $(container);
-    this.options = $.extend({}, options, options);
+    this.options = $.extend({}, defaults, options);
     this.selection = $('<div>')
       .addClass(this.options.selectionClass);
     this.items = $(this.options.items);
