@@ -18,10 +18,15 @@ $(function() {
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/13611918/10266308/27381d2e-6a27-11e5-9216-92344b558cb3.png)
 
+# Changes
+- Fix positioning inside positioned containers
+- add onFinish callback
+
 # License
 The MIT License (MIT)
 
 Copyright (c) 2015 Alex Suyun
+Copyright (c) 2018 Carl-Philip Hänsch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
