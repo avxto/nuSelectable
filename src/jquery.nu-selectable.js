@@ -1,6 +1,7 @@
 /**
  * nuSelectable - jQuery Plugin
  * Copyright (c) 2015, Alex Suyun
+ * Copyright (c) 2018, Carl-Philip Hänsch
  * Copyrights licensed under The MIT License (MIT)
  */
 ;
@@ -13,7 +14,8 @@
   var defaults = {
     onSelect: function() {},
     onUnSelect: function() {},
-    onClear: function() {}
+    onClear: function() {},
+    onFinish: function () {}
   };
 
   var nuSelectable = function(container, options) {
@@ -104,7 +106,7 @@
         'z-index': '999',
         'overflow': 'hidden'
       })
-      .appendTo(this.container);
+      .appendTo(document.body);
   };
 
   nuSelectable.prototype._drawSelection = function(width, height, x,
@@ -176,6 +178,7 @@
     if (event.pageX === this.pos[0] && event.pageY === this.pos[1]) {
       this.clear();
     }
+    this.options.onFinish();
   };
 
   nuSelectable.prototype._bindEvents = function() {
