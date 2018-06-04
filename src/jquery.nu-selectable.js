@@ -13,7 +13,8 @@
   var defaults = {
     onSelect: function() {},
     onUnSelect: function() {},
-    onClear: function() {}
+    onClear: function() {},
+    onFinished: function() {}
   };
 
   var nuSelectable = function(container, options) {
@@ -176,6 +177,7 @@
     if (event.pageX === this.pos[0] && event.pageY === this.pos[1]) {
       this.clear();
     }
+    this.options.onFinished();
   };
 
   nuSelectable.prototype._bindEvents = function() {
